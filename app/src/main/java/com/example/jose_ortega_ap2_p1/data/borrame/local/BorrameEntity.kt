@@ -7,7 +7,7 @@ import java.time.LocalDate
 @Entity(tableName = "borrame")
 data class BorrameEntity(
     @PrimaryKey(autoGenerate = true)
-    val borrameId: Int,
+    val borrameId: Int = 0,
     val fecha: LocalDate = LocalDate.now(),
     val descripcion: String = ""
 )

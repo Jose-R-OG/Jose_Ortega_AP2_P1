@@ -28,6 +28,8 @@ fun MineNavHost(
                 },
                 onEditBorrame = { id ->
                     navController.navigate(Screen.BorrameForm(borrameId = id))
+                },
+                onDeleteBorrame = { id ->
                 }
             )
         }
