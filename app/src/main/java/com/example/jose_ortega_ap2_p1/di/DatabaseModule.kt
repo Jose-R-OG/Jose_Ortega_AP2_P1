@@ -2,7 +2,7 @@ package com.example.jose_ortega_ap2_p1.di
 
 import android.content.Context
 import androidx.room.Room
-import com.example.jose_ortega_ap2_p1.data.borrame.local.BorrameDao
+import com.example.jose_ortega_ap2_p1.data.Amonestacion.local.AmonestacionDao
 import com.example.jose_ortega_ap2_p1.data.database.ParcialDatabase
 import dagger.Module
 import dagger.Provides
@@ -26,7 +26,7 @@ object DatabaseModule {
 
     @Provides
     @Singleton
-    fun provideBorrameDao(database: ParcialDatabase): BorrameDao {
-        return database.borrameDao()
+    fun provideBorrameDao(database: ParcialDatabase): AmonestacionDao {
+        return database.AmonestacionDao()
     }
 }

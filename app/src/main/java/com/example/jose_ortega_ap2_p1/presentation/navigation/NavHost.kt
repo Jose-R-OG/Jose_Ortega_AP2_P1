@@ -8,8 +8,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.jose_ortega_ap2_p1.presentation.form.BorrameFormScreen
-import com.example.jose_ortega_ap2_p1.presentation.list.BorrameListScreen
+import com.example.jose_ortega_ap2_p1.presentation.form.AmonestacionFormScreen
+import com.example.jose_ortega_ap2_p1.presentation.list.AmonestacionListScreen
+import com.example.jose_ortega_ap2_p1.presentation.list.AmonestacionListUiEvent
+
 
 @Composable
 fun MineNavHost(
@@ -22,24 +24,22 @@ fun MineNavHost(
         startDestination = Screen.BorrameList
     ) {
         composable<Screen.BorrameList> {
-            BorrameListScreen(
-                onAddBorrame = {
-                    navController.navigate(Screen.BorrameForm(borrameId = 0))
-                },
-                onEditBorrame = { id ->
-                    navController.navigate(Screen.BorrameForm(borrameId = id))
-                },
-                onDeleteBorrame = { id ->
-                }
+            AmonestacionListScreen(
+                onAddAmonestacion
+                = { navController.navigate(Screen.BorrameForm(borrameId = 0)) },
+                onEditAmonestacion
+                = { id -> navController.navigate(Screen.BorrameForm(borrameId = id)) }
             )
         }
 
         composable<Screen.BorrameForm> {
-            BorrameFormScreen(
-                onBack = {
+            AmonestacionFormScreen(
+                onNavigateBack = {
                     navController.navigateUp()
                 }
             )
         }
+
+
     }
 }
