@@ -10,7 +10,9 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.example.jose_ortega_ap2_p1.presentation.navigation.MineNavHost
 import com.example.jose_ortega_ap2_p1.ui.theme.Jose_Ortega_AP2_P1Theme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
